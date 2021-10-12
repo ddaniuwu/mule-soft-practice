@@ -12,7 +12,7 @@ This practice shows some points about MuleSoft! 💻
 `https://docs.mulesoft.com/studio/7.6/to-download-and-install-studio-lx`
     
 
-## Using ANypointStudio to build an API / Testing it with Postman
+## Using AnypointStudio to build an API / Testing it with Postman
   - As first step we have to create a new project 
   - After this , we give a name to our project and we can see our workspace 
   - Using an HTTP procotol we select the option in the right section and take a listener to our main section.
