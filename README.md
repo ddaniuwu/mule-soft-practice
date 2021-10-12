@@ -22,3 +22,21 @@ This practice shows some points about MuleSoft! 💻
 ## Testing with POSTMAN 
   - To test it we just have to go POSTMAN and page the default URL in our request input.
   - http://0.0.0.0:8081/hellomule
+
+
+## Setting a secure properties step
+- Once we made the process with de global elements configuration 
+- We go to the scene and we drag an HTTP LIstener
+
+```
+%dw 2.0
+output application/json
+---
+[{
+	FirstName: "Max",
+	LastName: "Mule",
+	Email: "maxthemule@mulesoft.com",
+	Company: "MuleSoft"
+}]
+
+```
