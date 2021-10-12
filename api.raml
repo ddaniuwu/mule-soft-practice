@@ -1,0 +1,71 @@
+#%RAML 1.0
+types:
+  address:
+    description: Address data type
+    properties:
+      street:
+        example: Example
+        type: string
+      city:
+        example: Example
+        type: string
+      postalCode:
+        example: Example
+        type: string
+      state:
+        example: Example
+        type: string
+      country:
+        example: Example
+        type: string
+  contact:
+    description: Contact data type
+    properties:
+      firstName?:
+        example: Example
+        type: string
+      lastName:
+        example: Example
+        type: string
+      phone?:
+        example: Example
+        type: string
+      email?:
+        example: Example
+        type: string
+      deliveryAddress?:
+        type: address
+      postalAddress?:
+        type: address
+title: NTO Customer Database API
+baseUri: api.myfirstapi.com
+description: |
+  This is an example of  my first API.
+mediaType:
+  - application/json
+version: 1.0.0
+protocols:
+  - HTTPS
+  - HTTP
+/customers:
+  get:
+    displayName: Get list of costumers
+    responses:
+      "200":
+        body:
+          items:
+            example: Example
+            type: string
+/customers/{customerId}:
+  get:
+    displayName: GET Customer by ID
+    body: {}
+    responses:
+      "200":
+        body:
+          type: contact
+    securedBy: []
+  uriParameters:
+    customerId:
+      example: Example
+      type: string
